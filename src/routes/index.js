@@ -8,6 +8,7 @@ import interceptor from './../authentication-interceptor';
 import healthRoute from './health.route';
 
 const router = express.Router();
+router.user('/', healthRoute);
 router.use('/login', loginRoute);
 router.use('/signup', signupRoute);
 
@@ -17,6 +18,5 @@ router.use('/signup', signupRoute);
 router.use('/event', eventRoute);
 router.use('/user', userRoute);
 router.use('/location', locationRoute)
-router.user('/', )
 //Error handler should be last one always
 export default router;
