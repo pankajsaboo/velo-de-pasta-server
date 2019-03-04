@@ -1,6 +1,5 @@
 import * as constants from './../constants'; // import constants
 import mongoose from 'mongoose';
-mongoose.Promise = global.Promise;
 
 const uri = `mongodb+srv://admin:admin@cluster0-8qjoa.mongodb.net/RACE_APP?retryWrites=true`;
 let _db;
@@ -12,7 +11,7 @@ const connectDB = async (callback) => {
             return callback(err)
         })
     } catch (e) {
-        throw e
+        throw e;
     }
 }
 
